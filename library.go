@@ -28,3 +28,17 @@ func permutation(str string, first bool) []string {
 	}
 	return res
 }
+
+// mod pow
+func mpow(a, x int64, mod int64) int64 {
+	var res int64 = 1
+	for ; x > 0; x >>= 1 {
+		if x&1 == 1 {
+			res *= a
+			res %= mod
+		}
+		a *= a
+		a %= mod
+	}
+	return res
+}
