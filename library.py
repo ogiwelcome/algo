@@ -17,6 +17,20 @@ class BIT:  # 1-indexed
         while i <= self.n:
             self.a[i] += x
             i += i & -i
+############ comb inv ###########
+N=10**5
+mod=10**9+7
+g1=[1,1]
+g2=[1,1]
+inv=[0,1]
+for i in range(2,N+1):
+    g1.append((g1[-1]*i)%mod)
+    inv.append((-inv[mod%i]*(mod//i))%mod)
+    g2.append((g2[-1]*inv[-1])%mod)
+def comb(n,r,mod):
+    if r<0 or r>n:
+        return 0
+    return g1[n]*g2[r]*g2[n-r]%mod
 
 
 ###################Combination mod######################
@@ -419,6 +433,23 @@ def gen_polyomino(n):
                 q = ((y-min_y, x-min_x) for y, x in q)
                 q = tuple(sorted(q))
                 yield q
+
+## 三点を通る円半径
+
+def min_c(x1,y1,x2,y2,x3,y3):
+    d1=(x2-x3)**2+(y2-y3)**2
+    d2=(x1-x3)**2+(y1-y3)**2
+    d3=(x1-x2)**2+(y1-y2)**2
+    d1,d2,d3=sorted([d1,d2,d3],reverse=True)
+    if d1>=d2+d3:
+        return d1**0.5/2
+    d1**=0.5 
+    d2**=0.5
+    d3**=0.5
+    cosa=(d2**2+d3**2-d1**2)/(2*d2*d3)
+    sina=(1-cosa**2)**0.5
+    return d1/2/sina
+
 ############## multivalue dict ###################
 
 # https://github.com/tatyam-prime/SortedSet/blob/main/SortedMultiset.py
@@ -552,3 +583,5 @@ class SortedMultiset(Generic[T]):
                 return ans + bisect_right(a, x)
             ans += len(a)
         return ans
+
+###################
