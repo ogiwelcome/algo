@@ -17,6 +17,15 @@ class BIT:  # 1-indexed
         while i <= self.n:
             self.a[i] += x
             i += i & -i
+
+    def bisect_left(self, x):
+        l=s=0
+        for i in range(self.n.bit_length(),-1,-1):
+            r=l+(1<<i)
+            if r<=self.n and s+self.a[r]<x:
+                s+=self.a[r]
+                l+=1<<i
+        return l+1,s
 ############ comb inv ###########
 N=10**5
 mod=10**9+7
@@ -150,7 +159,7 @@ def scc(N, G, RG):
     order = []
     state = [0]*N
     traversed, registered = 1, 2
-    for i in range(n):
+    for i in range(N):
         if state[i]:
             continue
         stack = [i]
@@ -168,7 +177,7 @@ def scc(N, G, RG):
                 order.append(stack.pop())
                 state[v] |= registered
     order.reverse()
-    group = [-1]*n
+    group = [-1]*N
     label = 0
     for s in order:
         if group[s] >= 0:
@@ -182,7 +191,11 @@ def scc(N, G, RG):
                     stack.append(to)
                     group[to] = label
         label += 1
-    return label, group
+    label=max(group)
+    size = [0]*(label+1)
+    for v in range(N):
+        size[group[v]]+=1
+    return label, group, size
 
 
 ###### euler tour ########
