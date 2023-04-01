@@ -1,0 +1,15 @@
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/b
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/b.deps.json
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/b.runtimeconfig.json
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/b.dll
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/ref/b.dll
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/bin/Debug/net6.0/b.pdb
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.csproj.AssemblyReference.cache
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.GeneratedMSBuildEditorConfig.editorconfig
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.AssemblyInfoInputs.cache
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.AssemblyInfo.cs
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.csproj.CoreCompileInputs.cache
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.dll
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/ref/b.dll
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.pdb
+/Users/oginomasahiro/working/algo/atcoder/cs/abc257/b/obj/Debug/net6.0/b.genruntimeconfig.cache
