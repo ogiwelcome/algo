@@ -1,4 +1,7 @@
 {
-    "python.formatting.provider": "black",
-    "java.project.sourcePaths": []
+    "code-runner.runInTerminal": true,
+    "code-runner.executorMap": {
+        "cpp": "cd $dir && g++ -std=c++17 -I . -DLOCAL $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
+    },
+    "code-runner.ignoreSelection": true,
 }
