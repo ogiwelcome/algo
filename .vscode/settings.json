@@ -4,4 +4,7 @@
         "cpp": "cd $dir && g++ -std=c++17 -I . -DLOCAL $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt"
     },
     "code-runner.ignoreSelection": true,
+    "files.associations": {
+        "random": "cpp"
+    },
 }
